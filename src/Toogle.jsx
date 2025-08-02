@@ -15,7 +15,7 @@ function Toogle() {
           width: "80vw",
         }}
       >
-        <h1>"Log In Now"</h1>
+        <h1>{"Log In Now"}</h1>
         <button onClick={() => setIsClicked(!isClicked)}>
           {isClicked ? "Logout" : "Login"}
         </button>
@@ -25,7 +25,7 @@ function Toogle() {
       {isClicked && (
         <div
           style={{
-            display: "flex",
+            display: "flex", 
             justifyContent: "center",
             alignItems: "center",
             inset: "0",

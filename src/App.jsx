@@ -4,6 +4,11 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Counter from "./Counter";
 import Toogle from "./Toogle";
+import PropFunction from "./Props";
+import FuncProps from "./Fun_Props";
+import Wrapper from "./Wrapper";
+import InputValidation from "./Input_Validation";
+import Checkbox from "./Checkbox";
 
 // function myName(myName){
 //   alert(myName);
@@ -35,6 +40,16 @@ function App() {
 
       <Counter/>
       <Toogle/>
+      <PropFunction name="Bruce Wayne" />
+      <FuncProps greet={() => alert("Hello")}/>
+      <Wrapper>
+        <p style={{color:"red" ,backgroundColor:"white"}}>This is an example of Wrapper which is basically rendering the html code inside the wrapper</p>
+      </Wrapper>
+      <InputValidation/>
+      <Checkbox/>
+        {/* emptycontainer */}
+        <div className="emptycontainer" style={ {height:"100px"}}/>      
+
     </>
   );
 }
