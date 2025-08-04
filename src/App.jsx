@@ -9,6 +9,11 @@ import FuncProps from "./Fun_Props";
 import Wrapper from "./Wrapper";
 import InputValidation from "./Input_Validation";
 import Checkbox from "./Checkbox";
+import RadioButtonsLogic from "./Radio_Btns";
+import MapCon from "./MapCon";
+import ClockTimer from "./ClockProject/ClockTimer";
+import Datas from "./NestedLoop/Datas";
+import CounterEff from "./Useeffect/CounterEff";
 
 // function myName(myName){
 //   alert(myName);
@@ -29,7 +34,7 @@ function App() {
 
   return (
     <>
-      <button onClick={() => myName("Dhruv")}>Click Dhruv</button>
+      {/* <button onClick={() => myName("Dhruv")}>Click Dhruv</button>
       <button onClick={() => myName("Ram")}>Click Ram</button>
 
       <h1>{fruit}</h1>
@@ -47,6 +52,16 @@ function App() {
       </Wrapper>
       <InputValidation/>
       <Checkbox/>
+      <RadioButtonsLogic />
+      <MapCon />
+      <Datas /> */}
+
+      {/* <ClockTimer /> */}
+
+
+
+
+      <CounterEff />
         {/* emptycontainer */}
         <div className="emptycontainer" style={ {height:"100px"}}/>      
 

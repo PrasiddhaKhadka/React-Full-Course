@@ -2,17 +2,18 @@ import { useState } from "react";
 
 function Checkbox() {
   const [checked, setChecked] = useState([]);
-  const handleSkills = (e) => {
-    const value = e.target.value;
-    const isChecked = e.target.checked;
 
-    if (isChecked) {
-      if (!checked.includes(value)) {
-        setChecked([...checked, value]);
-      }
-    } else {
-      setChecked(checked.filter((item) => item !== value));
+ 
+  const handleChange = (e) => {
+    console.log(e.target.value, e.target.checked);
+    if (e.target.checked) {
+      setChecked([...checked, e.target.value]);
     }
+    else{
+      // filter doesnot modify old array rather creates a new array 
+      setChecked([...checked.filter((item) => item !== e.target.value)])
+    }
+      
   };
 
   return (
@@ -20,24 +21,26 @@ function Checkbox() {
       <h1>Checkbox</h1>
       <input
         type="checkbox"
-        onChange={handleSkills}
+      
         id="python"
         value={"PYTHON"}
+        onChange={(e)=>handleChange(e)}
       />
-      <label htmlFor="python">PYTHON</label>
+      <label htmlFor="python" >PYTHON</label>
       <br />
-      <input type="checkbox" onChange={handleSkills} id="js" value={"JS"} />
+      <input type="checkbox" id="js" value={"JS"} onChange={handleChange}  />
       <label htmlFor="js">JS</label>
       <br />
 
-      <input type="checkbox" onChange={handleSkills} id="java" value={"JAVA"} />
+      <input type="checkbox"  id="java" value={"JAVA"} onChange={handleChange} />
       <label htmlFor="java">JAVA</label>
       <br />
 
-      <input type="checkbox" onChange={handleSkills} id="php" value={"PHP"} />
+      <input type="checkbox" id="php" value={"PHP"} onChange={handleChange} />
       <label htmlFor="php">PHP</label>
       <br />
-      <h3>{checked.toString()}</h3>
+      <h3>{checked}</h3>
+      <br />
     </div>
   );
 }
